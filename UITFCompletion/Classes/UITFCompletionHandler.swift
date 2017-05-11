@@ -17,11 +17,30 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     private var collection = [String]()
     private var containedAttributedText = NSMutableAttributedString()
     
-    public init(with userTextField: UITextField, withParentView parentView: UIView, andWithCollection collection: [String]) {
+    public init(with userTextField: UITextField, withParentView parentView: UIView, andWithCollection collection: [String]? = nil) {
         super.init()
         setup(userTextField: userTextField)
         setupCompletionTextHolder(withParentView: parentView)
-        setup(collection: collection)
+        
+        if let collection = collection {
+            setup(collection: collection)
+        }
+    }
+    
+    public func setup(collection: [String], withTagCharacter tagCharacter: String? = nil) {
+        if self.collection.count > 0 {
+            self.collection.removeAll()
+        }
+        var finalTag = String()
+        if let tag = tagCharacter {
+            finalTag = tag
+        } else {
+            finalTag = "@"
+        }
+        _ = collection.map {
+            let element = finalTag + $0
+            self.collection.append(element)
+        }
     }
     
     private func setup(userTextField: UITextField) {
@@ -41,13 +60,6 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
         completionTextHolder.textColor = UIColor(red: 0.1686, green: 0.3922, blue: 0.8078, alpha: 1.0)
         addTapGestureRecgnizerOnCompletionTextHolder()
         parentView.insertSubview(completionTextHolder, belowSubview: userTextField)
-    }
-    
-    private func setup(collection: [String]) {
-        _ = collection.map {
-            let element = "@" + $0
-            self.collection.append(element)
-        }
     }
     
     private func addTapGestureRecgnizerOnCompletionTextHolder() {

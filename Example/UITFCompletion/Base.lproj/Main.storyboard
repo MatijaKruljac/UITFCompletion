@@ -23,27 +23,38 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gpP-Yg-7c1">
-                                <rect key="frame" x="16" y="223" width="343" height="30"/>
+                                <rect key="frame" x="16" y="130" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-Z0-S3b">
+                                <rect key="frame" x="16" y="200" width="343" height="300"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="159" id="BRk-4y-YlJ"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="IYZ-gu-fky"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="qSw-bz-SQr"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="1IL-fa-J7R"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="vcj-Z0-S3b" secondAttribute="trailing" id="9o6-lO-F7C"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="vcj-Z0-S3b" secondAttribute="leading" id="Mi2-n7-fkV"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="66" id="RbD-LA-PFJ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vcj-Z0-S3b" secondAttribute="bottom" constant="167" id="bEx-It-P26"/>
+                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="top" secondItem="gpP-Yg-7c1" secondAttribute="bottom" constant="40" id="lzV-yS-8lQ"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="obG-MR-52F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EWg-ja-GUN"/>
                     <connections>
+                        <outlet property="tagsTextView" destination="vcj-Z0-S3b" id="RbB-bO-eTz"/>
                         <outlet property="userInputTextField" destination="gpP-Yg-7c1" id="sF2-CH-2bs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="-561"/>
+            <point key="canvasLocation" x="1128.8" y="-561.76911544227892"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ihV-wS-Wku">

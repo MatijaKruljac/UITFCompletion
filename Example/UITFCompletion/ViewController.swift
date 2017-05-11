@@ -12,6 +12,7 @@ import UITFCompletion
 class ViewController: UIViewController {
 
     @IBOutlet weak var userInputTextField: UITextField!
+    @IBOutlet weak var tagsTextView: UITextView!
     
     private var uitfCompletionHandler: UITFCompletionHandler!
     
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         title = "UITFCompletion Example"
         setupBackgroundColor()
         setupUITFCompletionHandler()
+        displayTags()
     }
     
     private func setupBackgroundColor() {
@@ -30,7 +32,25 @@ class ViewController: UIViewController {
     
     private func setupUITFCompletionHandler() {
         guard let parentView = userInputTextField.superview else { return }
-        uitfCompletionHandler = UITFCompletionHandler.init(with: userInputTextField, withParentView: parentView, andWithCollection: data)
+        
+        // In init you can also pass collection with default tagCharacter "@" or not
+        uitfCompletionHandler = UITFCompletionHandler.init(with: userInputTextField, withParentView: parentView)
+        
+        // TagCharacter is passed (it can be any character) - default is "@"
+        uitfCompletionHandler.setup(collection: data, withTagCharacter: "#")
+    }
+    
+    private func displayTags() {
+        let mutableString = NSMutableString()
+        mutableString.append("TAGS: ")
+        for index in 0...data.count-1 {
+            if index < data.count-1 {
+                mutableString.append(data[index] + ", ")
+            } else {
+                mutableString.append(data[index])
+            }
+        }
+        tagsTextView.text = mutableString as String
     }
 }
 
