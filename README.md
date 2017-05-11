@@ -1,9 +1,5 @@
 # UITFCompletion
 
-[![CI Status](http://img.shields.io/travis/Matija Kruljac/UITFCompletion.svg?style=flat)](https://travis-ci.org/Matija Kruljac/UITFCompletion)
-[![Version](https://img.shields.io/cocoapods/v/UITFCompletion.svg?style=flat)](http://cocoapods.org/pods/UITFCompletion)
-[![License](https://img.shields.io/cocoapods/l/UITFCompletion.svg?style=flat)](http://cocoapods.org/pods/UITFCompletion)
-[![Platform](https://img.shields.io/cocoapods/p/UITFCompletion.svg?style=flat)](http://cocoapods.org/pods/UITFCompletion)
 
 ## Example
 
@@ -22,7 +18,7 @@ pod "UITFCompletion"
 
 ## Author
 
-Matija Kruljac, matija.kruljac@undabot.com
+Matija Kruljac, kruljac.matija@gmail.com
 
 ## License
 
