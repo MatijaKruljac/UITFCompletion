@@ -22,7 +22,7 @@ pod "UITFCompletion"
 
 ## Author
 
-Matija Kruljac, matija.kruljac@undabot.com
+Matija Kruljac, kruljac.matija@gmail.com
 
 ## License
 
