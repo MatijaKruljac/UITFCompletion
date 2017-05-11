@@ -1,5 +1,6 @@
 # UITFCompletion
 
+UITFCompletion makes it easy to complete words or make tags of participants of group conversation in UITextField.
 
 ## Example
 
@@ -7,13 +8,36 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+- iOS 8.0+
+- Xcode 8
+
 ## Installation
 
 UITFCompletion is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
-pod "UITFCompletion"
+```swift
+    platform :ios, '8.0'
+    use_frameworks!
+
+    target 'MyApp' do
+        pod "UITFCompletion"
+    end
+```
+
+## Usage
+
+Using UITF is very easy. Just call init method and pass all required parameters. Code snippet is below:
+
+```swift
+    guard let parentView = userInputTextField.superview else { return }
+
+    // In init you can also pass collection with default tagCharacter "@" or not
+    uitfCompletionHandler = UITFCompletionHandler.init(with: userInputTextField, withParentView: parentView)
+
+    // TagCharacter is passed (it can be any character) - default is "@"
+    uitfCompletionHandler.setup(collection: data, withTagCharacter: "#")
+
 ```
 
 ## Author
