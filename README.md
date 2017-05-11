@@ -28,8 +28,8 @@ end
 ## Usage
 
 Using `UITFCompletion` is very easy. Just call `init` method and pass all required parameters.
-Collection needs to be an array of `String`s`. `TagCharacter` can be set when `collection` 
-is set with `setup(collection: [String], withTagCharacter: String)` method.
+Collection needs to be an array of `String`s.` TagCharacter `can be set when `collection` 
+is set with `setup(collection: collection, withTagCharacter: String)` method.
 
 ```swift
 guard let parentView = userInputTextField.superview else { return }
