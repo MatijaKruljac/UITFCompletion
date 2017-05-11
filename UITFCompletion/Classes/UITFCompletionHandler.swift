@@ -67,8 +67,11 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     }
     
     private func appendSuggestion(forCompletion completionTextHolderText: String) {
-        let emptySpace = createAttributed(string: " ", with: .black)
-        containedAttributedText.append(emptySpace)
+        if let userTextFieldText = userTextField.text,
+            userTextFieldText.components(separatedBy: " ").count > 1 {
+            let emptySpace = createAttributed(string: " ", with: .black)
+            containedAttributedText.append(emptySpace)
+        }
         
         let choosenSuggestion = createAttributed(string: completionTextHolderText, with: .blue)
         containedAttributedText.append(choosenSuggestion)
@@ -83,7 +86,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
         return attributedString
     }
     
-    func setSugestionAndAnimate(with text: String) {
+    private func setSugestionAndAnimate(with text: String) {
         guard let lastWord = text.components(separatedBy: " ").last else { return }
         var contains = false
         _ = collection.map {
