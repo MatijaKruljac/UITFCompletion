@@ -1,0 +1,6 @@
+framework module UITFCompletion {
+  umbrella header "UITFCompletion-umbrella.h"
+
+  export *
+  module * { export * }
+}

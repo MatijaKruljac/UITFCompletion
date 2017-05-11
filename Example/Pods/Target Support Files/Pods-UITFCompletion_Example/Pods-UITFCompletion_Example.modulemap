@@ -1,0 +1,6 @@
+framework module Pods_UITFCompletion_Example {
+  umbrella header "Pods-UITFCompletion_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

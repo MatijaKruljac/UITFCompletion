@@ -1,0 +1,16 @@
+PODS:
+  - UITFCompletion (0.1.0)
+
+DEPENDENCIES:
+  - UITFCompletion (from `../`)
+
+EXTERNAL SOURCES:
+  UITFCompletion:
+    :path: ../
+
+SPEC CHECKSUMS:
+  UITFCompletion: fd0ed1510b32fc3228faa095a50c466c5fa5488f
+
+PODFILE CHECKSUM: d241890fe8e8ebea300a10ae593d0c68c478c0ee
+
+COCOAPODS: 1.2.1

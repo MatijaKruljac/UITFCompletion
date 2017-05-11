@@ -7,18 +7,30 @@
 //
 
 import UIKit
+import UITFCompletion
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userInputTextField: UITextField!
+    
+    private var uitfCompletionHandler: UITFCompletionHandler!
+    
+    private var data = ["shark", "lion", "giraffe", "elephant", "orangutan"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        title = "UITFCompletion Example"
+        setupBackgroundColor()
+        setupUITFCompletionHandler()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func setupBackgroundColor() {
+        view.backgroundColor = UIColor(red: 1, green: 0.9098, blue: 0.9098, alpha: 1.0)
     }
-
+    
+    private func setupUITFCompletionHandler() {
+        guard let parentView = userInputTextField.superview else { return }
+        uitfCompletionHandler = UITFCompletionHandler.init(with: userInputTextField, withParentView: parentView, andWithCollection: data)
+    }
 }
 
