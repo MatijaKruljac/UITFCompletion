@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UITFCompletion_Example' do
+  pod 'UITFCompletion', :path => '../'
+
+  target 'UITFCompletion_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
