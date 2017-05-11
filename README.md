@@ -17,26 +17,28 @@ UITFCompletion is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```swift
-    platform :ios, '8.0'
-    use_frameworks!
+platform :ios, '8.0'
+use_frameworks!
 
-    target 'MyApp' do
-        pod "UITFCompletion"
-    end
+target 'MyApp' do
+    pod "UITFCompletion"
+end
 ```
 
 ## Usage
 
-Using UITF is very easy. Just call init method and pass all required parameters. Code snippet is below:
+Using `UITFCompletion` is very easy. Just call `init` method and pass all required parameters.
+`Collection needs to be an array of `String`s`. `TagCharacter` can be set when `collection` 
+is set with `setup(collection: [String], withTagCharacter: String)`.
 
 ```swift
-    guard let parentView = userInputTextField.superview else { return }
+guard let parentView = userInputTextField.superview else { return }
 
-    // In init you can also pass collection with default tagCharacter "@" or not
-    uitfCompletionHandler = UITFCompletionHandler.init(with: userInputTextField, withParentView: parentView)
+// In init you can also pass collection with default tagCharacter "@" or not
+uitfCompletionHandler = UITFCompletionHandler.init(with: userInputTextField, withParentView: parentView)
 
-    // TagCharacter is passed (it can be any character) - default is "@"
-    uitfCompletionHandler.setup(collection: data, withTagCharacter: "#")
+// TagCharacter is passed (it can be any character) - default is "@"
+uitfCompletionHandler.setup(collection: data, withTagCharacter: "#")
 
 ```
 
