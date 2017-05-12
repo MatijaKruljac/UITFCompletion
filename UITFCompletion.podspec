@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 UITFCompletion makes it easy to complete words or make tags of participants of group conversation in UITextField like Facebook Messenger. In
-future versions possibility of adding an image for tag (sugestions) in completion text holder will be implemented. It is very ease to use, provideing
-a full customization of text color and tag character.
+future versions possibility of adding an image for tag (sugestions) in completion text holder will be implemented. It is very easy to use, providing
+a full customization of text colors and tag character.
                        DESC
 
   s.homepage         = 'https://github.com/MatijaKruljac/UITFCompletion'
