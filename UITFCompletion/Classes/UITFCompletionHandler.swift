@@ -15,6 +15,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     private var userTextField: UITextField!
     
     private var collection = [String]()
+    private var tagCharacter = String()
     private var containedAttributedText = NSMutableAttributedString()
     
     public init(with userTextField: UITextField, withParentView parentView: UIView, andWithCollection collection: [String]? = nil) {
@@ -22,25 +23,25 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
         setup(userTextField: userTextField)
         setupCompletionTextHolder(withParentView: parentView)
         
+        if self.tagCharacter.isEmpty {
+            setup(tagCharacter: Tags.defaultCharacter.value)
+        }
         if let collection = collection {
             setup(collection: collection)
         }
     }
     
-    public func setup(collection: [String], withTagCharacter tagCharacter: String? = nil) {
+    public func setup(collection: [String]) {
         if self.collection.count > 0 {
             self.collection.removeAll()
         }
-        var finalTag = String()
-        if let tag = tagCharacter {
-            finalTag = tag
-        } else {
-            finalTag = "@"
-        }
         _ = collection.map {
-            let element = finalTag + $0
-            self.collection.append(element)
+            self.collection.append($0)
         }
+    }
+    
+    public func setup(tagCharacter: String) {
+        self.tagCharacter = tagCharacter
     }
     
     private func setup(userTextField: UITextField) {
@@ -104,7 +105,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
         _ = collection.map {
             if $0.contains(lastWord) {
                 contains = true
-                completionTextHolder.text = $0
+                completionTextHolder.text = tagCharacter + $0
                 translateCompletionTextHolderUp()
             }
         }
@@ -156,7 +157,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
         
         let trimmedLastWord = lastWord.trimmingCharacters(in: .whitespaces)
         _ = collection.map {
-            if $0 == trimmedLastWord {
+            if tagCharacter + $0 == trimmedLastWord {
                 updateContainedAttributedText()
                 containedAttributedText.replaceCharacters(in: NSMakeRange(containedAttributedText.string.characters.count - trimmedLastWord.characters.count,
                                                                           trimmedLastWord.characters.count), with: "")
@@ -183,5 +184,16 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     public func textFieldShouldClear(_ textField: UITextField) -> Bool {
         containedAttributedText = NSMutableAttributedString()
         return true
+    }
+}
+
+enum Tags: String {
+    case defaultCharacter
+    
+    var value: String {
+        switch self {
+        case .defaultCharacter:
+            return "@"
+        }
     }
 }

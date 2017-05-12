@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
     
     private var uitfCompletionHandler: UITFCompletionHandler!
     
+    // initial setup for example
     private var data = ["shark", "lion", "giraffe", "elephant", "orangutan"]
     private var tagCharacter = "@"
     
@@ -44,11 +45,14 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
     private func setupUITFCompletionHandler() {
         guard let parentView = userInputTextField.superview else { return }
         
-        // in init collection can be passed or not - if not default tagCharacter is "@"
+        // required parameters for initialization are UITextField for input and its parent view
+        // in init collection can be passed or not - if passed tagCharacter is "@" as default
         uitfCompletionHandler = UITFCompletionHandler.init(with: userInputTextField, withParentView: parentView)
         
-        // when setting up collection desired tagCharacter can be passed - default is "@"
-        uitfCompletionHandler.setup(collection: data, withTagCharacter: tagCharacter)
+        // setup collection and tagCharacter
+        // if setup(tagCharacter: String) is not called, tagCharacter will be "@" as default
+        uitfCompletionHandler.setup(collection: data)
+        uitfCompletionHandler.setup(tagCharacter: tagCharacter)
     }
     
     private func displayTags() {
@@ -73,15 +77,16 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
     
     private func updateCollection() {
         data.removeAll()
-        data = tagsTextView.text.components(separatedBy: ",").map{
+        data = tagsTextView.text.components(separatedBy: ",").map {
             $0.trimmingCharacters(in: .whitespaces)
         }
         if let tagCharacter = tagCharacterTextField.text {
             self.tagCharacter = tagCharacter
         }
         
-        // update collection
-        uitfCompletionHandler.setup(collection: data, withTagCharacter: tagCharacter)
+        // update collection and tagCharacter
+        uitfCompletionHandler.setup(collection: data)
+        uitfCompletionHandler.setup(tagCharacter: tagCharacter)
     }
 }
 
