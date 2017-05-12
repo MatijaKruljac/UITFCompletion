@@ -35,7 +35,7 @@ is set with `setup(collection: collection, withTagCharacter: String)` method.
 
 ```swift
 // initial setup for example
-private var data = ["shark", "lion", "giraffe", "elephant", "orangutan"]
+private var data = ["shark", "lion", "giraffe", "elephant", "orangutan", "dog", "cat"]
 private var tagCharacter = "@" // or "##"
 
 guard let parentView = userInputTextField.superview else { return }
