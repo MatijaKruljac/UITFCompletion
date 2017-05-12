@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+UITFCompletion makes it easy to complete words or make tags of participants of group conversation in UITextField like Facebook Messenger. In
+future versions possibility of adding an image for tag (sugestions) in completion text holder will be implemented. It is very ease to use, provideing
+a full customization of text color and tag character.
                        DESC
 
   s.homepage         = 'https://github.com/MatijaKruljac/UITFCompletion'
