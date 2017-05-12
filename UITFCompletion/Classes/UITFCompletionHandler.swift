@@ -15,6 +15,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     private var userTextField: UITextField!
     
     private var collection = [String]()
+    private var chosenTags = [String]()
     private var tagCharacter = String()
     private var containedAttributedText = NSMutableAttributedString()
     
@@ -86,9 +87,11 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
             containedAttributedText.append(emptySpace)
         }
         
-        let choosenSuggestion = createAttributed(string: completionTextHolderText, with: .blue)
-        containedAttributedText.append(choosenSuggestion)
+        let chosenSuggestion = createAttributed(string: completionTextHolderText, with: .blue)
+        containedAttributedText.append(chosenSuggestion)
         userTextField.attributedText = containedAttributedText
+        
+        chosenTags.append(completionTextHolderText)
     }
     
     private func createAttributed(string: String, with color: UIColor) -> NSMutableAttributedString {
@@ -156,12 +159,16 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
         else { return }
         
         let trimmedLastWord = lastWord.trimmingCharacters(in: .whitespaces)
-        _ = collection.map {
-            if tagCharacter + $0 == trimmedLastWord {
+        for index in 0...collection.count-1 {
+            if tagCharacter + collection[index] == trimmedLastWord || chosenTags.contains(trimmedLastWord) {
                 updateContainedAttributedText()
                 containedAttributedText.replaceCharacters(in: NSMakeRange(containedAttributedText.string.characters.count - trimmedLastWord.characters.count,
                                                                           trimmedLastWord.characters.count), with: "")
                 userTextField.attributedText = containedAttributedText
+                
+                guard let index = chosenTags.index(of: trimmedLastWord) else { return }
+                chosenTags.remove(at: index)
+                break;
             }
         }
         translateCompletionTextHolderDown(with: nil)
@@ -183,6 +190,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     
     public func textFieldShouldClear(_ textField: UITextField) -> Bool {
         containedAttributedText = NSMutableAttributedString()
+        chosenTags.removeAll()
         return true
     }
 }
