@@ -168,19 +168,17 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     
     private func handleBackspaceTap() {
         guard
-            let userTextFieldText = userTextField.text,
-            let lastWord = userTextFieldText.components(separatedBy: " ").last
+            let userTextFieldText = userTextField.text
         else { return }
-        
-        let trimmedLastWord = lastWord.trimmingCharacters(in: .whitespaces)
-        for index in 0...collection.count-1 {
-            if tagCharacter + collection[index] == trimmedLastWord || chosenTags.contains(trimmedLastWord) {
+    
+        for index in 0...chosenTags.count-1 {
+            if userTextFieldText.hasSuffix(chosenTags[index]) {
                 updateContainedAttributedText()
-                containedAttributedText.replaceCharacters(in: NSMakeRange(containedAttributedText.string.characters.count - trimmedLastWord.characters.count,
-                                                                          trimmedLastWord.characters.count), with: "")
+                containedAttributedText.replaceCharacters(in: NSMakeRange(containedAttributedText.string.characters.count - chosenTags[index].characters.count,
+                                                                          chosenTags[index].characters.count), with: "")
                 userTextField.attributedText = containedAttributedText
                 
-                if let index = chosenTags.index(of: trimmedLastWord) {
+                if let index = chosenTags.index(of: chosenTags[index]) {
                     chosenTags.remove(at: index)
                 }
                 break;
