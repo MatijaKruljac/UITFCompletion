@@ -1,10 +1,11 @@
 # UITFCompletion
 
-UITFCompletion makes it easy to complete words or make tags of participants of group conversation in UITextField.
+UITFCompletion makes it easy to complete words or make tags of participants of group conversation for instance in UITextField like Facebook Messenger.
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+This video shows example application in which collection and tag character is editable.  
 
 ![alt text](https://github.com/MatijaKruljac/UITFCompletion/blob/master/uitf_example_video.gif?raw=true)
 
