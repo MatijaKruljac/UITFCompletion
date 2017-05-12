@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Matija Kruljac/UITFCompletion'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/MatijaKruljac/UITFCompletion'
+  # s.screenshots     = 'https://github.com/MatijaKruljac/UITFCompletion/blob/master/uitf_example_video.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Matija Kruljac' => 'kruljac.matija@gmail.com' }
-  s.source           = { :git => 'https://github.com/Matija Kruljac/UITFCompletion.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/MatijaKruljac/UITFCompletion.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
