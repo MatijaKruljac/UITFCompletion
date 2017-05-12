@@ -34,12 +34,14 @@ is set with `setup(collection: collection, withTagCharacter: String)` method.
 ```swift
 guard let parentView = userInputTextField.superview else { return }
 
-// In init you can also pass collection with default tagCharacter "@" or not
+// required parameters for initialization are UITextField for input and its parent view
+// in init collection can be passed or not - if passed tagCharacter is "@" as default
 uitfCompletionHandler = UITFCompletionHandler.init(with: userInputTextField, withParentView: parentView)
 
-// TagCharacter is passed (it can be any character) - default is "@"
-uitfCompletionHandler.setup(collection: data, withTagCharacter: "#")
-
+// setup collection and tagCharacter
+// if setup(tagCharacter: String) is not called, tagCharacter will be "@" as default
+uitfCompletionHandler.setup(collection: data)
+uitfCompletionHandler.setup(tagCharacter: tagCharacter)
 ```
 
 ## Author
