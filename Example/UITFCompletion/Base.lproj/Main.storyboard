@@ -29,25 +29,51 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-Z0-S3b">
-                                <rect key="frame" x="16" y="200" width="343" height="300"/>
+                                <rect key="frame" x="16" y="211" width="343" height="100"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAGS (separated by &quot;,&quot;):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reP-GF-6pP">
+                                <rect key="frame" x="16" y="182" width="183" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag character:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blu-YQ-iGb">
+                                <rect key="frame" x="16" y="330" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRg-oL-b9G">
+                                <rect key="frame" x="135" y="325" width="224" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="1IL-fa-J7R"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="vcj-Z0-S3b" secondAttribute="trailing" id="9o6-lO-F7C"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="vcj-Z0-S3b" secondAttribute="leading" id="Mi2-n7-fkV"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="66" id="RbD-LA-PFJ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vcj-Z0-S3b" secondAttribute="bottom" constant="167" id="bEx-It-P26"/>
-                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="top" secondItem="gpP-Yg-7c1" secondAttribute="bottom" constant="40" id="lzV-yS-8lQ"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="obG-MR-52F"/>
+                            <constraint firstItem="reP-GF-6pP" firstAttribute="leading" secondItem="vcj-Z0-S3b" secondAttribute="leading" id="0v6-6r-bUU"/>
+                            <constraint firstItem="IRg-oL-b9G" firstAttribute="leading" secondItem="blu-YQ-iGb" secondAttribute="trailing" constant="8" symbolic="YES" id="5Lx-gJ-CMM"/>
+                            <constraint firstItem="reP-GF-6pP" firstAttribute="top" secondItem="gpP-Yg-7c1" secondAttribute="bottom" constant="22" id="6NB-sm-aRf"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="66" id="8xN-et-4TM"/>
+                            <constraint firstItem="blu-YQ-iGb" firstAttribute="centerY" secondItem="IRg-oL-b9G" secondAttribute="centerY" id="GYv-ao-zGT"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="reP-GF-6pP" secondAttribute="leading" id="Hns-RB-MAy"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ii3-cp-obJ"/>
+                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="top" secondItem="reP-GF-6pP" secondAttribute="bottom" constant="8" symbolic="YES" id="Iqf-df-orh"/>
+                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="trailing" secondItem="IRg-oL-b9G" secondAttribute="trailing" id="QTh-Uf-U0L"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IRg-oL-b9G" secondAttribute="bottom" constant="312" id="WCy-cX-lsg"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="czw-v8-W8j"/>
+                            <constraint firstItem="IRg-oL-b9G" firstAttribute="top" secondItem="vcj-Z0-S3b" secondAttribute="bottom" constant="14" id="hLK-VU-rjQ"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="vcj-Z0-S3b" secondAttribute="trailing" id="sah-g6-x0K"/>
+                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="leading" secondItem="blu-YQ-iGb" secondAttribute="leading" id="uEd-Ta-nUN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EWg-ja-GUN"/>
                     <connections>
+                        <outlet property="tagCharacterTextField" destination="IRg-oL-b9G" id="3Ie-l4-ewf"/>
                         <outlet property="tagsTextView" destination="vcj-Z0-S3b" id="RbB-bO-eTz"/>
                         <outlet property="userInputTextField" destination="gpP-Yg-7c1" id="sF2-CH-2bs"/>
                     </connections>
