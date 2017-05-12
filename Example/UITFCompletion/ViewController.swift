@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
     private var uitfCompletionHandler: UITFCompletionHandler!
     
     // initial setup for example
-    private var data = ["shark", "lion", "giraffe", "elephant", "orangutan"]
+    private var data = ["shark", "lion", "giraffe", "elephant", "orangutan", "dog", "cat"]
     private var tagCharacter = "@"
     
     override func viewDidLoad() {
