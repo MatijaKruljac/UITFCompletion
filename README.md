@@ -6,6 +6,8 @@ UITFCompletion makes it easy to complete words or make tags of participants of g
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+![alt text](http://g.recordit.co/xf8WotBiHo.gif)
+
 ## Requirements
 
 - iOS 8.0+
