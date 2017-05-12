@@ -53,6 +53,10 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
         // if setup(tagCharacter: String) is not called, tagCharacter will be "@" as default
         uitfCompletionHandler.setup(collection: data)
         uitfCompletionHandler.setup(tagCharacter: tagCharacter)
+        
+        // colors for completion holder text and chosen tag can be changed - default color is .blue
+        uitfCompletionHandler.changeCompletionText(color: UIColor(red: 0, green: 0.6275, blue: 0.2275, alpha: 1.0))
+        uitfCompletionHandler.changeChosenTag(color: UIColor(red: 0.8863, green: 0, blue: 0.0588, alpha: 1.0))
     }
     
     private func displayTags() {

@@ -14,6 +14,9 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     private var completionTextHolder: UILabel!
     private var userTextField: UITextField!
     
+    private var completionTextColor: UIColor!
+    private var chosenTagColor: UIColor!
+    
     private var collection = [String]()
     private var chosenTags = [String]()
     private var tagCharacter = String()
@@ -21,6 +24,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     
     public init(with userTextField: UITextField, withParentView parentView: UIView, andWithCollection collection: [String]? = nil) {
         super.init()
+        
         setup(userTextField: userTextField)
         setupCompletionTextHolder(withParentView: parentView)
         
@@ -30,6 +34,9 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
         if let collection = collection {
             setup(collection: collection)
         }
+        
+        changeCompletionText(color: .blue)
+        changeChosenTag(color: .blue)
     }
     
     public func setup(collection: [String]) {
@@ -43,6 +50,14 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
     
     public func setup(tagCharacter: String) {
         self.tagCharacter = tagCharacter
+    }
+    
+    public func changeCompletionText(color: UIColor) {
+        completionTextHolder.textColor = color
+    }
+    
+    public func changeChosenTag(color: UIColor) {
+        chosenTagColor = color
     }
     
     private func setup(userTextField: UITextField) {
@@ -59,7 +74,6 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
             width: userTextField.frame.size.width,
             height: userTextField.frame.size.height)
         completionTextHolder.frame = rect
-        completionTextHolder.textColor = UIColor(red: 0.1686, green: 0.3922, blue: 0.8078, alpha: 1.0)
         addTapGestureRecgnizerOnCompletionTextHolder()
         parentView.insertSubview(completionTextHolder, belowSubview: userTextField)
     }
@@ -87,7 +101,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
             containedAttributedText.append(emptySpace)
         }
         
-        let chosenSuggestion = createAttributed(string: completionTextHolderText, with: .blue)
+        let chosenSuggestion = createAttributed(string: completionTextHolderText, with: chosenTagColor)
         containedAttributedText.append(chosenSuggestion)
         userTextField.attributedText = containedAttributedText
         
@@ -166,8 +180,9 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
                                                                           trimmedLastWord.characters.count), with: "")
                 userTextField.attributedText = containedAttributedText
                 
-                guard let index = chosenTags.index(of: trimmedLastWord) else { return }
-                chosenTags.remove(at: index)
+                if let index = chosenTags.index(of: trimmedLastWord) {
+                    chosenTags.remove(at: index)
+                }
                 break;
             }
         }
