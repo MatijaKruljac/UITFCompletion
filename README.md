@@ -28,10 +28,14 @@ end
 ## Usage
 
 Using `UITFCompletion` is very easy. Just call `init` method and pass all required parameters.
-Collection needs to be an array of `String`s.` TagCharacter `can be set when `collection` 
+Collection must be an array of `String`s.` TagCharacter `can be set when `collection` 
 is set with `setup(collection: collection, withTagCharacter: String)` method.
 
 ```swift
+// initial setup for example
+private var data = ["shark", "lion", "giraffe", "elephant", "orangutan"]
+private var tagCharacter = "@" // or "##"
+
 guard let parentView = userInputTextField.superview else { return }
 
 // required parameters for initialization are UITextField for input and its parent view
