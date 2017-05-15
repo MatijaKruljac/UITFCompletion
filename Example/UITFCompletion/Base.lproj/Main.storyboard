@@ -52,31 +52,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUW-su-BJc">
-                                <rect key="frame" x="16" y="101" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="top" secondItem="TUW-su-BJc" secondAttribute="bottom" constant="8" symbolic="YES" id="5vc-Gk-uxI"/>
-                            <constraint firstItem="IRg-oL-b9G" firstAttribute="top" secondItem="vcj-Z0-S3b" secondAttribute="bottom" constant="14" id="93G-W4-cEP"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IRg-oL-b9G" secondAttribute="bottom" constant="312" id="D4p-5a-U5F"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="vcj-Z0-S3b" secondAttribute="trailing" id="I8T-kj-SRA"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="KHU-PP-Fw6"/>
-                            <constraint firstItem="reP-GF-6pP" firstAttribute="top" secondItem="gpP-Yg-7c1" secondAttribute="bottom" constant="22" id="OW2-If-8jj"/>
-                            <constraint firstItem="reP-GF-6pP" firstAttribute="leading" secondItem="vcj-Z0-S3b" secondAttribute="leading" id="PWS-4G-Mps"/>
-                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="trailing" secondItem="IRg-oL-b9G" secondAttribute="trailing" id="Uhh-4a-xek"/>
-                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="leading" secondItem="blu-YQ-iGb" secondAttribute="leading" id="Uos-BA-aOK"/>
-                            <constraint firstItem="TUW-su-BJc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="37" id="jM5-Mn-Wno"/>
-                            <constraint firstItem="TUW-su-BJc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="k1l-ts-MnW"/>
-                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="top" secondItem="reP-GF-6pP" secondAttribute="bottom" constant="8" symbolic="YES" id="n3a-hQ-HZk"/>
-                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="reP-GF-6pP" secondAttribute="leading" id="rfj-Ph-hTw"/>
-                            <constraint firstItem="TUW-su-BJc" firstAttribute="leading" secondItem="gpP-Yg-7c1" secondAttribute="leading" id="sZ9-bV-oye"/>
-                            <constraint firstItem="blu-YQ-iGb" firstAttribute="centerY" secondItem="IRg-oL-b9G" secondAttribute="centerY" id="ubU-xm-G36"/>
-                            <constraint firstItem="IRg-oL-b9G" firstAttribute="leading" secondItem="blu-YQ-iGb" secondAttribute="trailing" constant="8" symbolic="YES" id="yNn-JA-7kx"/>
+                            <constraint firstItem="IRg-oL-b9G" firstAttribute="top" secondItem="vcj-Z0-S3b" secondAttribute="bottom" constant="14" id="4lB-TA-Yhk"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="vcj-Z0-S3b" secondAttribute="trailing" id="8gq-Ka-5l5"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="66" id="HVg-U2-rhg"/>
+                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="top" secondItem="reP-GF-6pP" secondAttribute="bottom" constant="8" symbolic="YES" id="IEb-hZ-MLE"/>
+                            <constraint firstItem="IRg-oL-b9G" firstAttribute="leading" secondItem="blu-YQ-iGb" secondAttribute="trailing" constant="8" symbolic="YES" id="Ivp-JJ-YCV"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="reP-GF-6pP" secondAttribute="leading" id="QZ0-XA-mdK"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IRg-oL-b9G" secondAttribute="bottom" constant="312" id="SIo-Mb-3kb"/>
+                            <constraint firstItem="blu-YQ-iGb" firstAttribute="centerY" secondItem="IRg-oL-b9G" secondAttribute="centerY" id="Tb9-2X-dLH"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="UXd-66-CiG"/>
+                            <constraint firstItem="reP-GF-6pP" firstAttribute="leading" secondItem="vcj-Z0-S3b" secondAttribute="leading" id="WjJ-Cn-Yzw"/>
+                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="trailing" secondItem="IRg-oL-b9G" secondAttribute="trailing" id="dKL-Jf-7yu"/>
+                            <constraint firstItem="reP-GF-6pP" firstAttribute="top" secondItem="gpP-Yg-7c1" secondAttribute="bottom" constant="22" id="jPp-0M-YFf"/>
+                            <constraint firstItem="vcj-Z0-S3b" firstAttribute="leading" secondItem="blu-YQ-iGb" secondAttribute="leading" id="kpP-Xv-qG1"/>
+                            <constraint firstItem="gpP-Yg-7c1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="tg6-kZ-269"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EWg-ja-GUN"/>
