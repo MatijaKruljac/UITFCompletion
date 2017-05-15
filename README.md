@@ -18,6 +18,7 @@ This gif shows example application in which collection and tag character can be 
 
 - iOS 8.0+
 - Xcode 8
+- Swift 3.0
 
 ## Installation
 
