@@ -7,8 +7,9 @@ UITFCompletion makes it easy to complete words or make tags of participants of g
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 This gif shows example application in which collection and tag character can be edited.  
 
-
-![alt text](https://github.com/MatijaKruljac/UITFCompletion/blob/master/uitf_example_video.gif?raw=true)
+<p align="center">
+  <img src="https://github.com/MatijaKruljac/UITFCompletion/blob/master/uitf_example_video.gif?raw=true" >
+</p>
 
 ## Requirements
 
