@@ -27,7 +27,7 @@ This gif shows example application in which collection and tag character can be 
 ## Installation
 
 UITFCompletion is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, simply add the following lines to your Podfile:
 
 ```swift
 platform :ios, '8.0'
