@@ -171,7 +171,7 @@ public class UITFCompletionHandler: NSObject, UITextFieldDelegate {
             let userTextFieldText = userTextField.text
         else { return }
     
-        for index in 0...chosenTags.count-1 {
+        for index in stride(from: 0, through: chosenTags.count-1, by: 1) {
             if userTextFieldText.hasSuffix(chosenTags[index]) {
                 updateContainedAttributedText()
                 containedAttributedText.replaceCharacters(in: NSMakeRange(containedAttributedText.string.characters.count - chosenTags[index].characters.count,
