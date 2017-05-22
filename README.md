@@ -2,6 +2,7 @@
 
 UITFCompletion makes it easy to complete words or make tags of participants of group conversation for instance in UITextField like Facebook Messenger.
 
+[![CI Status](https://travis-ci.org/MatijaKruljac/UITFCompletion.svg?branch=master)](https://travis-ci.org/MatijaKruljac/UITFCompletion.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/UITFCompletion.svg?style=flat)](http://cocoapods.org/pods/UITFCompletion)
 [![License](https://img.shields.io/cocoapods/l/UITFCompletion.svg?style=flat)](http://cocoapods.org/pods/UITFCompletion)
 [![Platform](https://img.shields.io/cocoapods/p/UITFCompletion.svg?style=flat)](http://cocoapods.org/pods/UITFCompletion)
