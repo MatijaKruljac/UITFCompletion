@@ -10,5 +10,5 @@ language: swift
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- xcodebuild test -workspace Example/UITFCompletion.xcworkspace -scheme UITFCompletion-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xcodebuild -workspace Example/UITFCompletion.xcworkspace -scheme UITFCompletion-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 - pod lib lint
