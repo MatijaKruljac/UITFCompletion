@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UITFCompletion'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'UITFCompletion makes it easy to complete words or make tags of participants of group conversation in UITextField.'
 
 # This description is used to generate tags and improve search results.
